@@ -1,0 +1,26 @@
+{
+  "name": "nodejs_childprocess_sample",
+  "version": "0.0.0",
+  "description": "Node.js application that spawns a child process (python)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aidken/nodejs_childprocess_sample.git"
+  },
+  "keywords": [
+    "nodejs",
+    "node.js",
+    "python"
+  ],
+  "author": "kenichi aida",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/aidken/nodejs_childprocess_sample/issues"
+  },
+  "dependencies": {
+    "express": "~4.12.3"
+  }
+}
