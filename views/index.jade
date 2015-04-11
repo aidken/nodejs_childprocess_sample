@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col-sm-12
+        p Welcome to #{title}
+
+    if user
+      if orders
+        p Your orders
+        table.table-bordered.table-hover
+          thead
+            tr
+              th Order Number
+              th Order Date
+              th Amount
+              th PV
+          tbody
+            each order in orders
+              tr
+                td <a href='/details/#{order._id}'>#{order._id}</a>
+                td #{order.orderDate}
+                td #{order.orderAmount}
+                td #{order.orderPV}
+      else
+        p You currently do not have any orders.
+    else
+      p Please <a href="/login">login</a> first.
