@@ -21,6 +21,9 @@
     "url": "https://github.com/aidken/nodejs_childprocess_sample/issues"
   },
   "dependencies": {
-    "express": "~4.12.3"
+    "express": "~4.12.3",
+    "body-parser": "~1.12.2",
+    "jade": "~1.9.2",
+    "connect-busboy": "0.0.2"
   }
 }
