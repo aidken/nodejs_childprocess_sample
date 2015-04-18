@@ -28,6 +28,19 @@ app.get('/python', function(req, res) {
     });
 });
 
+app.get('/perl', function(req, res) {
+    var python = require('child_process').spawn(
+	'perl',
+	['./tmp.pl']
+    );
+    var output = '';
+    python.stdout.on('data', function(data){ output += data });
+    python.on('close', function(code){
+	if (code !== 0) { return res.send(500).send(code); }
+	return res.status(200).send(output);
+    });
+});
+
 app.get('/upload', function(req, res) {
     res.render('upload');
 });
