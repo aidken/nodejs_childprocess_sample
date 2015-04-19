@@ -2,9 +2,10 @@
 
 import sys
 
-print('Hello from python!')
-
-infile = sys.argv[1]
+try:
+    infile = sys.argv[1]
+except IndexError:
+    sys.exit("Please specify file.")
 
 with open(infile) as fh:
     for line in fh:
